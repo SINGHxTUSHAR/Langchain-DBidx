@@ -1,7 +1,7 @@
 ipykernel
 langchain
 python-dotenv
-langchain_community
+langchain-community
 pypdf
 bs4
 arxiv
