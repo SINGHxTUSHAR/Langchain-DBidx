@@ -1,5 +1,4 @@
 import streamlit as st
-import openai
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
@@ -31,11 +30,11 @@ def generate_response(question,llm,temperature,max_tokens):
     return answer
 
 ## #Title of the app
-st.title("Enhanced Q&A Chatbot With OpenAI")
+st.title("Q&A Chatbot With Ollama")
 
 
 ## Select the OpenAI model
-llm=st.sidebar.selectbox("Select Open Source model",["mistral"])
+llm=st.sidebar.selectbox("Select Open Source model",["mistral","Gemma 2","DeepSeek-R1","Llama 3.3"])
 
 ## Adjust response parameter
 temperature=st.sidebar.slider("Temperature",min_value=0.0,max_value=1.0,value=0.7)
